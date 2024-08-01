@@ -2,6 +2,7 @@ const { defineConfig } = require("cypress");
 
 module.exports = defineConfig({
   e2e: {
+    chromeWebSecurity: false,
     // "baseUrl": "https://www.saucedemo.com/",
     // "baseUrl": "https://qauto.forstudy.space/",
     // "defaultCommandTimeout": 5000,
