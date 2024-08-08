@@ -26,8 +26,8 @@ describe('Inventory Page tests with POM', () => {
         cy.get('[data-test="product-sort-container"] option').should('have.length', 4);
     })
 
-    it('Open shopping cart page', () => {
-        InventoryPage.openCartPage('[data-test="shopping-cart-link"]');
+    it.only('Open shopping cart page', () => {
+        InventoryPage.openCartPage();
         cy.url().should('include', 'cart.html');
     })
 

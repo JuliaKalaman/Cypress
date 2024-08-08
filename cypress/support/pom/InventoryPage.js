@@ -22,8 +22,8 @@ class InventoryPage extends BasePage {
         return cy.get('div').contains(text).click();
     }
 
-    openCartPage(testData) {
-        return cy.get(testData).click();
+    openCartPage() {
+        return cy.get('[data-test="shopping-cart-link"]').click();
     }
 }
 
