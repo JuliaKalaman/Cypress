@@ -1,12 +1,11 @@
 import LoginPage from '../../support/pom/LoginPage';
 import ItemPage from '../../support/pom/ItemPage';
 import InventoryPage from '../../support/pom/InventoryPage';
-import testData from '../../fixtures/credentials.json';
 
 describe('Inventory Page tests with POM', () => {
     beforeEach(() => {
         LoginPage.open();
-        LoginPage.login(testData.userNames.correctUsername, testData.userPasswords.correctPassword);
+        LoginPage.login(Cypress.env('USER_NAME'), Cypress.env('USER_PASSWORD'));
         cy.url().should('include', 'inventory.html');
         InventoryPage.openItemPage('Sauce Labs Bolt T-Shirt');
     })
