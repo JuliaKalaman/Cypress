@@ -4,9 +4,13 @@ on:
   push:
     branches:
       - hw26_actions_cypress
+      - main
+      - master
   pull_request:
     branches:
       - hw26_actions_cypress
+      - main
+      - master
 
 jobs:
   cypress-run:
